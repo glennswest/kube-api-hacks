@@ -6,19 +6,31 @@ uses https://github.com/godaddy/kubernetes-client
 cd kube-api-hacks/nodejs
 ```
 
-## locally
+## run locally
 ```
 npm i kubernetes-client express
 npm init -f
 npm start
 ```
-## openshift
+test
+
+```
+curl localhost:8080
+```
+
+## run openshift
 ```
 oc new-project api
 oc new-build --binary --name=api -l app=api -i nodejs
 oc start-build api --from-dir=. --follow
 oc new-app api
 oc expose svc api
+```
+
+test
+
+```
+curl http://api-api.192.168.137.2.xip.io/
 ```
 
 ## openshift auth
