@@ -15,4 +15,5 @@ oc new-project api
 oc new-build --binary --name=api -l app=api -i nodejs
 oc start-build api --from-dir=. --follow
 oc new-app api
+oc expose svc api
 ```
