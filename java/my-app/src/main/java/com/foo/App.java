@@ -17,14 +17,20 @@ import java.net.InetSocketAddress;
 /**
  * simple kube api call using
  * https://github.com/fabric8io/fabric8/tree/master/components/kubernetes-api
+ *
+ * to test:
+ *   mvn exec:java
+ *   curl localhost:8080
  */
 public class App {
     public static void main(String[] args) throws IOException {
+        // oc whoami -t, also see doco for env variables configuration
         String accountToken = "5UyzEQXm__XkAO-wh3sVmMstisUjpt4odEWDeU9Q2ws";
         Config config = new ConfigBuilder().withOauthToken(accountToken).build();
         config.setMasterUrl("https://192.168.137.2:8443");
         config.setNamespace("default");
 
+        // simple web server
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/", new MyHandler(config));
         server.start();
