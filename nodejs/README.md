@@ -1,4 +1,7 @@
 # kube-api-hacks
+
+uses https://github.com/godaddy/kubernetes-client
+
 ```
 cd kube-api-hacks/nodejs
 ```
