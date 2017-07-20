@@ -25,7 +25,7 @@ import java.net.InetSocketAddress;
 public class App {
     public static void main(String[] args) throws IOException {
         // oc whoami -t, also see doco for env variables configuration
-        String accountToken = "5UyzEQXm__XkAO-wh3sVmMstisUjpt4odEWDeU9Q2ws";
+        String accountToken = "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJkZWZhdWx0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZWNyZXQubmFtZSI6InN1cGVyLWRlbW8tdXNlci10b2tlbi1jOWYxdCIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJzdXBlci1kZW1vLXVzZXIiLCJrdWJlcm5ldGVzLmlvL3NlcnZpY2VhY2NvdW50L3NlcnZpY2UtYWNjb3VudC51aWQiOiI5MjVjOGVkMi02Y2ZmLTExZTctYmQyMS01MjU0MDBiMzdkMWEiLCJzdWIiOiJzeXN0ZW06c2VydmljZWFjY291bnQ6ZGVmYXVsdDpzdXBlci1kZW1vLXVzZXIifQ.GCUB3KPmTSVUVKBMJPKA-zsz-Bnpq4-LgW5lzaSyb-shB-OZUa0QlBOgCd8BQrpP_Cp5VT52hYKIxsAf6agWffsKClowACQ_0Y_Qoe1fAexVh8jRRjPPz5jJPYZrJ4Gpr-7vVMkHAhw0ZFZShmWA0kvORIwBSCwE-ZROlaXDqQb86xgKa8OOaZBo2TeXfsMlHd_eQuFu4WgB6EVNFOj99x9QmTUAc-pgjepUMdAcLVUYe21o2XankXNxb3ZIPUzhfaQ1iY3_WGqZ8-C8Q2ds5Xq9g8t9Ejt9DsnXKwpiNfvOTM1lgs80lxUgiPVsCAYuiAPgO_GdNazTR3TYOfA-Yw";
         Config config = new ConfigBuilder().withOauthToken(accountToken).build();
         config.setMasterUrl("https://192.168.137.2:8443");
         config.setNamespace("default");
